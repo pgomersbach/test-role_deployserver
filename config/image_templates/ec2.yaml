@@ -1,4 +1,9 @@
 AMI:
+  ubuntu1204:
+    :image:
+      :foss: ami-01470531
+    :region: us-west-2
+
   ubuntu1404:
     :image:
       :foss: ami-6989a659
