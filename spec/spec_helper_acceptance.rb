@@ -26,9 +26,7 @@ RSpec.configure do |c|
     hosts.each do |host|
       on host ,shell('mkdir /tmp/modules')
       scp_to host, "#{proj_root}/spec/fixtures/modules/", "/tmp", {:ignore => ["role_deployserver", ".bundle", ".git", ".idea", ".vagrant", ".vendor", "vendor",  "bundle",  "tests", "log", ".", ".."]}
-      on host, shell('find /tmp/modules/profile_puppetmaster')
       on host, shell('mv /tmp/modules/* /etc/puppet/modules')
-      on host, shell('find /etc/puppet/modules/profile_puppetmaster')
       on host, puppet('module', 'install', 'puppetlabs-stdlib'), { :acceptable_exit_codes => [0,1] }
     end
   end
