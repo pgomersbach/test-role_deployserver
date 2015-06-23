@@ -11,6 +11,7 @@ class role_deployserver
 {
   # a role includes one or more profiles and at least a 'base' profile
   include ::profile_base
+  include ::profile_base::rspec_monitor
   include ::profile_puppetmaster
   include ::profile_puppetmaster::rspec_monitor
 }
