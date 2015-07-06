@@ -3,5 +3,6 @@ HOSTS:
     platform: ubuntu-14.04-x64
     image: ubuntu:14.04
     hypervisor: docker
+    docker_preserve_image: true
 CONFIG: 
   type: foss

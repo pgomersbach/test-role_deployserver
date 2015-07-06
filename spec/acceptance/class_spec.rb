@@ -11,6 +11,7 @@ describe 'role_deployserver class' do
 
       # Run it twice and test for idempotency
       apply_manifest(pp, :catch_failures => true)
+      sleep(10) # Puppetdb takes a while to start up
       apply_manifest(pp, :catch_changes  => true)
     end
 
