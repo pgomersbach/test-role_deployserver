@@ -27,7 +27,7 @@ else
   PUPPETMAJOR=$PUPPETMAJORVERSION
 fi
 
-if [[ "$PUPPETMAJOR" eq 3 ]]; then
+if [ "$PUPPETMAJOR" = 3 ]; then
     MODULEDIR="/etc/puppet/modules/"
   else
     MODULEDIR="/etc/puppetlabs/code/modules/"
